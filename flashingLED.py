@@ -1,6 +1,8 @@
 import time
 import pyvisa
 
+print("Hello world, dit is een commit change.")
+
 rm = pyvisa.ResourceManager("@py")
 ports = rm.list_resources()
 
@@ -16,10 +18,12 @@ device = rm.open_resource(
 
 # heartbeat light
 
-# Deze persoon heeft denk ik wel een beetje een rimtestoornis. 
+
 
 hartslag = device.query(f"OUT:CH0 {1023}")
 geen_hartslag = device.query(f"OUT:CH0 {0}")
+
+
 
 for t in range(0, 1000):
 
