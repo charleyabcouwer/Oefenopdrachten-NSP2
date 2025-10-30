@@ -34,3 +34,5 @@ print(f"ADC waarde bij {spanning_test} V: {adc}.")
 
 # Ik heb de opdrachten gemaakt tot Arduino op breadboard omdat ik vanaf daar niet verder kon
 # (niet tot Kanalen van Arduino). 
+
+# Test verandering
