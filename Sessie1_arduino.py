@@ -10,7 +10,7 @@ print(ports)
 # Arduino poort: ASRL5::INSTR
 
 device = rm.open_resource(
-    "ASRL5::INSTR", read_termination="\r\n", write_termination="\n"
+    "ASRL8::INSTR", read_termination="\r\n", write_termination="\n"
 )
 identification = device.query("*IDN?")
 print(identification)

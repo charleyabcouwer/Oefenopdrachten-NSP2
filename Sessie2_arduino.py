@@ -1,0 +1,1 @@
+# Commando maximale uitvoerspanning op kanaal 0: OUT:CH0 1023
