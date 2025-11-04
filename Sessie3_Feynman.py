@@ -23,16 +23,3 @@ master_oogway.forward(100)
 
 master_oogway.screen.mainloop()
 
-# Method __intit__(self)
-
-class Turtle:
-    def __init__(self):
-        master_oogway = Turtle()
-
-    def forward(self, distance):
-        self.forward(50)
-
-    def left(self, angle):
-        # turn turtle counterclockwise
-        # by angle in degrees
-        self.left(30)
