@@ -17,7 +17,7 @@ def hello(name, count, tea):
     for _ in range(count):
         print(f"Hello {name}!")
         if tea:
-            print("Wil je thee?")
+            print("Do you want some tea?")
         time.sleep(2)  # Wait 2 seconds
 
 
