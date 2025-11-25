@@ -29,13 +29,21 @@ class UserInterface(QtWidgets.QMainWindow):
         add_text_button = QtWidgets.QPushButton("Add text")
         hbox.addWidget(add_text_button)
 
+        # Extra buttons
+        add_hello_button = QtWidgets.QPushButton("Hello")
+        hbox.addWidget(add_hello_button)
+
         # slots and signals
         clear_button.clicked.connect(self.textedit.clear)
         add_text_button.clicked.connect(self.add_text_button_clicked)
+        add_hello_button.clicked.connect(self.add_hello_button_clicked)
 
     @Slot()
     def add_text_button_clicked(self):
         self.textedit.append("Boem")
+
+    def add_hello_button_clicked(self):
+        self.textedit.append("Hello, world!")
 
 
 def main():
