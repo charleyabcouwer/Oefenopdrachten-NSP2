@@ -14,6 +14,13 @@ class UserInterface(QtWidgets.QMainWindow):
         central_widget = QtWidgets.QWidget()
         self.setCentralWidget(central_widget)
 
+        # betekenis geven aan spinbox
+        self.spin_box = QtWidgets.QSpinBox()
+        self.spin_box.setMaximum(28)
+        self.spin_box.setMinimum(0)
+        self.spin_box.setSingleStep(1)
+        self.spin_box.setValue(28)
+
         # geef de central widget een verticale layout
         vbox = QtWidgets.QVBoxLayout()
         central_widget.setLayout(vbox)
@@ -24,18 +31,16 @@ class UserInterface(QtWidgets.QMainWindow):
         hbox = QtWidgets.QHBoxLayout()
         vbox.addLayout(hbox)
 
-        spinbox_button = QtWidgets.QPushButton("Leeg")
-        hbox.addWidget(spinbox_button)
+        hbox.addWidget(self.spin_box)
         push_button = QtWidgets.QPushButton("Add value")
         hbox.addWidget(push_button)
 
         # slots and signals
-        spinbox_button.clicked.connect(self.textedit.clear)
-        push_button.clicked.connect(self.add_text_button_clicked)
+        push_button.clicked.connect(self.push_button_clicked)
 
     @Slot()
-    def add_text_button_clicked(self):
-        self.textedit.append("Boem")
+    def push_button_clicked(self):
+        self.textedit.append(str(self.spin_box.value()))
 
 
 def main():
