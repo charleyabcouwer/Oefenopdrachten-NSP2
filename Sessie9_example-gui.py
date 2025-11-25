@@ -8,6 +8,11 @@ class UserInterface(QtWidgets.QMainWindow):
         # roep de __init__() aan van de parent class
         super().__init__()
 
+        # elk QMainWindow moet een central widget hebben
+        # hierbinnen maak je een layout en hang je andere widgets
+        central_widget = QtWidgets.QWidget()
+        self.setCentralWidget(central_widget)
+
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
