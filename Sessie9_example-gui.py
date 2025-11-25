@@ -35,6 +35,8 @@ class UserInterface(QtWidgets.QMainWindow):
         add_hello_button = QtWidgets.QPushButton("Hello")
         hbox.addWidget(add_hello_button)
 
+        # De quit-button wordt toegevoegd aan de vbox. Omdat deze onder de andere buttons staat
+        # in de code wordt deze specifieke button ook in de GUI als onderste button weergegeven.
         quit_button = QtWidgets.QPushButton("Quit")
         vbox.addWidget(quit_button)
 
@@ -42,6 +44,7 @@ class UserInterface(QtWidgets.QMainWindow):
         clear_button.clicked.connect(self.textedit.clear)
         add_text_button.clicked.connect(self.add_text_button_clicked)
         add_hello_button.clicked.connect(self.add_hello_button_clicked)
+        quit_button.clicked.connect(self.close)
 
     @Slot()
     def add_text_button_clicked(self):
