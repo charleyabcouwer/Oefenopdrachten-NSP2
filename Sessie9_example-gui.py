@@ -13,6 +13,16 @@ class UserInterface(QtWidgets.QMainWindow):
         central_widget = QtWidgets.QWidget()
         self.setCentralWidget(central_widget)
 
+        # geef de central widget een verticale layout
+        vbox = QtWidgets.QVBoxLayout()
+        central_widget.setLayout(vbox)
+
+        # voeg geneste layouts en widgets toe
+        self.textedit = QtWidgets.QTextEdit()
+        vbox.addWidget(self.textedit)
+        hbox = QtWidgets.QHBoxLayout()
+        vbox.addLayout(hbox)
+
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
