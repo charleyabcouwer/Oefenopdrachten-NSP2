@@ -1,6 +1,7 @@
 import sys
 
 from PySide6 import QtWidgets
+from PySide6.QtCore import Slot
 
 
 class UserInterface(QtWidgets.QMainWindow):
@@ -27,6 +28,14 @@ class UserInterface(QtWidgets.QMainWindow):
         hbox.addWidget(clear_button)
         add_text_button = QtWidgets.QPushButton("Add text")
         hbox.addWidget(add_text_button)
+
+        # slots and signals
+        clear_button.clicked.connect(self.textedit.clear)
+        add_text_button.clicked.connect(self.add_text_button_clicked)
+
+    @Slot()
+    def add_text_button_clicked(self):
+        self.textedit.append("Boem")
 
 
 def main():
