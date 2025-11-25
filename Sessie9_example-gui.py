@@ -23,6 +23,11 @@ class UserInterface(QtWidgets.QMainWindow):
         hbox = QtWidgets.QHBoxLayout()
         vbox.addLayout(hbox)
 
+        clear_button = QtWidgets.QPushButton("Clear")
+        hbox.addWidget(clear_button)
+        add_text_button = QtWidgets.QPushButton("Add text")
+        hbox.addWidget(add_text_button)
+
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
