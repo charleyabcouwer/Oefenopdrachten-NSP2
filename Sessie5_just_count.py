@@ -1,3 +1,3 @@
-import square
+import Sessie5_square
 
-print(f"The square of 5 is {square.square(5)}")
+print(f"The square of 5 is {Sessie5_square.square(5)}")
