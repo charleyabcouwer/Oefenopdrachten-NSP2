@@ -24,6 +24,8 @@ class UserInterface(QtWidgets.QMainWindow):
         hbox = QtWidgets.QHBoxLayout()
         vbox.addLayout(hbox)
 
+        # extra layout
+
         clear_button = QtWidgets.QPushButton("Clear")
         hbox.addWidget(clear_button)
         add_text_button = QtWidgets.QPushButton("Add text")
@@ -32,6 +34,9 @@ class UserInterface(QtWidgets.QMainWindow):
         # Extra buttons
         add_hello_button = QtWidgets.QPushButton("Hello")
         hbox.addWidget(add_hello_button)
+
+        quit_button = QtWidgets.QPushButton("Quit")
+        vbox.addWidget(quit_button)
 
         # slots and signals
         clear_button.clicked.connect(self.textedit.clear)
