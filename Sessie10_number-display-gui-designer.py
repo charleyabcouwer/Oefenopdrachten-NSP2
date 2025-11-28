@@ -3,7 +3,7 @@ import sys
 from PySide6 import QtWidgets
 from PySide6.QtCore import Slot
 
-from Sessie9_number_display_gui import Ui_MainWindow
+from Sessie10_ui_number_display_app import Ui_MainWindow
 
 
 class UserInterface(QtWidgets.QMainWindow):
@@ -14,12 +14,12 @@ class UserInterface(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
         self.ui.add_value_button.clicked.connect(self.add_value_button_clicked)
-        self.ui.addValue(self.textedit)
+
+        self.ui.quit_button.clicked.connect(self.close)
 
     @Slot()
     def add_value_button_clicked(self):
-        self.ui.textedit.append("You've clicked the 'Add value' button")
-        self.ui.textedit.append(str(self.spin_box.value()))
+        self.ui.textedit.append(str(self.ui.value.value()))
 
 
 def main():
