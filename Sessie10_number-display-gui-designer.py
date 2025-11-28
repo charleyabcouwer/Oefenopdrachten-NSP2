@@ -14,10 +14,12 @@ class UserInterface(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
         self.ui.add_value_button.clicked.connect(self.add_value_button_clicked)
+        self.ui.addValue(self.textedit)
 
     @Slot()
     def add_value_button_clicked(self):
         self.ui.textedit.append("You've clicked the 'Add value' button")
+        self.ui.textedit.append(str(self.spin_box.value()))
 
 
 def main():
